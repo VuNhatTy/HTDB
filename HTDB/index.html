@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng Nhu Cầu Giao MAY</title>
+  <style>
+ body {
+      font-family: Arial, sans-serif;
+      background-color: #4e584e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      
+    }
+
+    .header {
+  display: flex; /* Sử dụng flexbox */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  height: 15vh; /* Đặt chiều cao cho header */
+  margin-bottom: 20px; /* Thêm khoảng cách dưới */
+}
+
+.title {
+  font-size: 48px; /* Kích thước chữ lớn hơn */
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 ô mỗi hàng */
+      gap: 15px;
+      justify-items: center;
+      margin: 20px 0;
+    }
+
+    .cell-wrapper {
+      text-align: center;
+    }
+
+    .cell-name {
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .cell {
+      width: 350px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .cell.green {
+      background-color: #00ff00;
+      color: #003300;
+    }
+
+    .cell.red {
+      background-color: #ff0000;
+      color: white;
+      animation: blink 1s infinite;
+    }
+    .snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  font-size: 1em;
+  user-select: none;
+  z-index: 1000;
+  animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+
+    @keyframes blink {
+      0%, 100% {
+        background-color: #d1b8ba;
+      }
+      50% {
+        background-color: #ff0000;
+      }
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">HỆ THỐNG ĐÈN BÁO GIAO MAY</div>
+  </div>
+  <div class="grid-container">
+    <!-- Tạo 16 ô với tên -->
+    <!-- Sử dụng data-sound-id để liên kết âm thanh với từng ô -->
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 1</div>
+      <div class="cell green" data-sound-id="sound1" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 2</div>
+      <div class="cell green" data-sound-id="sound2" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 3</div>
+      <div class="cell green" data-sound-id="sound3" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 4</div>
+      <div class="cell green" data-sound-id="sound4" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 5</div>
+      <div class="cell green" data-sound-id="sound5" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 6</div>
+      <div class="cell green" data-sound-id="sound6" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>   
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 7</div>
+      <div class="cell green" data-sound-id="sound7" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 8</div>
+      <div class="cell green" data-sound-id="sound8" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY9</div>
+      <div class="cell green" data-sound-id="sound9" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 10</div>
+      <div class="cell green" data-sound-id="sound10" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 11</div>
+      <div class="cell green" data-sound-id="sound11" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 12</div>
+      <div class="cell green" data-sound-id="sound12" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 13</div>
+      <div class="cell green" data-sound-id="sound13" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 14</div>
+      <div class="cell green" data-sound-id="sound14" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 15</div>
+      <div class="cell green" data-sound-id="sound15" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    <div class="cell-wrapper">
+      <div class="cell-name">MAY 16</div>
+      <div class="cell green" data-sound-id="sound16" onclick="toggleStatus(this)">ĐỦ HÀNG</div>
+    </div>
+    
+    
+    <!-- Lặp lại tương tự cho các ô khác -->
+    <!-- Thêm các audio với id tương ứng -->
+  </div>
+
+  <div class="footer">Nhấp vào ô để thay đổi trạng thái</div>
+
+  <!-- Audio cho từng ô -->
+  <audio id="sound1" src="Sound/MAY1.mp3"></audio>
+  <audio id="sound2" src="Sound/MAY2.mp3"></audio>
+  <audio id="sound3" src="Sound/MAY3.mp3"></audio>
+  <audio id="sound4" src="Sound/MAY4.mp3"></audio>
+  <audio id="sound5" src="Sound/MAY5.mp3"></audio>
+  <audio id="sound6" src="Sound/MAY6.mp3"></audio>
+  <audio id="sound7" src="Sound/MAY7.mp3"></audio>
+  <audio id="sound8" src="Sound/MAY8.mp3"></audio>
+  <audio id="sound9" src="Sound/MAY9.mp3"></audio>
+  <audio id="sound10" src="Sound/MAY10.mp3"></audio>
+  <audio id="sound11" src="Sound/MAY11.mp3"></audio>
+  <audio id="sound12" src="Sound/MAY12.mp3"></audio>
+  <audio id="sound13" src="Sound/MAY13.mp3"></audio>
+  <audio id="sound14" src="Sound/MAY14.mp3"></audio>
+  <audio id="sound15" src="Sound/MAY15.mp3"></audio>
+  <audio id="sound16" src="Sound/MAY16.mp3"></audio>
+  <!-- Thêm tiếp các audio khác -->
+
+  <script>
+    // Lưu trữ trạng thái phát âm thanh của từng ô
+    const soundIntervals = {};
+    const resetTimers = {};
+  
+    function toggleStatus(cell) {
+      const soundId = cell.getAttribute('data-sound-id');
+      const soundElement = document.getElementById(soundId);
+  
+      if (cell.classList.contains('green')) {
+        // Chuyển sang trạng thái "CẦN GIAO HÀNG"
+        cell.textContent = 'CẦN GIAO HÀNG';
+        cell.classList.remove('green');
+        cell.classList.add('red');
+  
+        // Phát âm thanh liên tục
+        soundIntervals[soundId] = setInterval(() => {
+          soundElement.play();
+        }, 5000); // Lặp lại âm thanh mỗi 5 giây
+  
+        // Đặt hẹn giờ để tự động chuyển về "ĐỦ HÀNG" sau 15 giây
+        resetTimers[soundId] = setTimeout(() => {
+          resetToGreen(cell, soundId);
+        }, 25000); // 15 giây
+      } else {
+        // Chuyển lại trạng thái "ĐỦ HÀNG" ngay lập tức khi click lại
+        resetToGreen(cell, soundId);
+      }
+    }
+  
+    function resetToGreen(cell, soundId) {
+      // Chuyển lại trạng thái "ĐỦ HÀNG"
+      cell.textContent = 'ĐỦ HÀNG';
+      cell.classList.remove('red');
+      cell.classList.add('green');
+  
+      // Dừng phát âm thanh
+      clearInterval(soundIntervals[soundId]);
+      delete soundIntervals[soundId];
+  
+      // Hủy bỏ hẹn giờ nếu có
+      if (resetTimers[soundId]) {
+        clearTimeout(resetTimers[soundId]);
+        delete resetTimers[soundId];
+      }
+    }
+  </script>
+  
+</body>
+</html>
